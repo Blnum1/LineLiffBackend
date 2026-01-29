@@ -72,18 +72,18 @@ const createMainMenuQuickReply = () => {
 
 const createMonthQuickReply = () => {
     const months = [
-        { label: 'Jan 2026', text: 'Jan 2026' },
-        { label: 'Feb 2026', text: 'Feb 2026' },
-        { label: 'Mar 2026', text: 'Mar 2026' },
-        { label: 'Apr 2026', text: 'Apr 2026' },
-        { label: 'May 2026', text: 'May 2026' },
-        { label: 'Jun 2026', text: 'Jun 2026' },
-        { label: 'Jul 2026', text: 'Jul 2026' },
-        { label: 'Aug 2026', text: 'Aug 2026' },
-        { label: 'Sep 2026', text: 'Sep 2026' },
-        { label: 'Oct 2026', text: 'Oct 2026' },
-        { label: 'Nov 2026', text: 'Nov 2026' },
-        { label: 'Dec 2026', text: 'Dec 2026' }
+        { label: 'Jan', text: 'Jan' },
+        { label: 'Feb', text: 'Feb' },
+        { label: 'Mar', text: 'Mar' },
+        { label: 'Apr', text: 'Apr' },
+        { label: 'May', text: 'May' },
+        { label: 'Jun', text: 'Jun' },
+        { label: 'Jul', text: 'Jul' },
+        { label: 'Aug', text: 'Aug' },
+        { label: 'Sep', text: 'Sep' },
+        { label: 'Oct', text: 'Oct' },
+        { label: 'Nov', text: 'Nov' },
+        { label: 'Dec', text: 'Dec' }
     ];
      return {
         "quickReply": {
