@@ -282,14 +282,14 @@ app.post('/webhook', async (req, res) => {
                 if (keyword === 'เลือกเดือน') {
             await sendMessageWithQuickReply(
                 replyToken,
-                "เลือกเดือนที่ต้องการดูข้อมูล:",
+                "เลือกเดือนที่ต้องการดูข้อมูล",
                 createMonthQuickReply()
             );
         } 
         else if (keyword === 'เลือกทีม') {
             await sendMessageWithQuickReply(
                 replyToken,
-                "เลือกทีมที่ต้องการดูข้อมูล:",
+                "เลือกทีมที่ต้องการดูข้อมูล",
                 createTeamQuickReply()
             );
         }
