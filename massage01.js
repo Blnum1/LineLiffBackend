@@ -6,7 +6,7 @@ const pool = new Pool({
     ssl: false
 });
 
-const getSalesData = async (keyword) => {
+const getTeamData = async (keyword) => {
     try {
         let query = `
             SELECT
@@ -39,14 +39,14 @@ const getSalesData = async (keyword) => {
 
 const createMessageData = async (keyword) => {
     try {
-        const salesData = await getSalesData(keyword);
+        const teamData = await getTeamData(keyword);
 
-        if (!salesData || salesData.length === 0) {
+        if (!teamData || teamData.length === 0) {
             throw new Error("No data found");
         }
 
         // จัดกลุ่มข้อมูลตาม teamid และ month
-        const groupedData = salesData.reduce((acc, item) => {
+        const groupedData = teamData.reduce((acc, item) => {
             const key = `${item.teamid}_${item.rolemdsmonth}`;
             if (!acc[key]) {
                 acc[key] = {
@@ -105,7 +105,7 @@ const createMessageData = async (keyword) => {
                     "contents": [
                         {
                             "type": "text",
-                            "text": `Sales Team ${teamName} ${monthName}`,
+                            "text": `Team ${teamName} ${monthName}`,
                             "weight": "bold",
                             "size": "lg"
                         },
@@ -132,7 +132,7 @@ const createMessageData = async (keyword) => {
                             "contents": [
                                 {
                                     "type": "text",
-                                    "text": "Sale Overview",
+                                    "text": "Overview",
                                     "color": "#666666",
                                     "flex": 3
                                 }
@@ -248,7 +248,7 @@ const createMessageData = async (keyword) => {
             "messages": [
                 {
                     "type": "flex",
-                    "altText": "Sales Team Capacity Overview",
+                    "altText": "Team Capacity Overview",
                     "contents": {
                         "type": "carousel",
                         "contents": carouselContents
